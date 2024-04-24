@@ -4,17 +4,22 @@
 package org.example;
 
 import static java.awt.Color.BLACK;
+import static java.awt.Color.BLUE;
 import static java.awt.Color.WHITE;
 import static java.lang.String.format;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class App {
 
     public static void main(String[] args) {
 
-        Chair deskChair = new DeskChair(BLACK, new BigDecimal(200L), new Wheels(5));
-        Chair kitchenChair = new KitchenChair(WHITE, new BigDecimal(100L), new Wheels(4));
+        ChairColor deskColor = new ChairColor(BLACK, WHITE);
+        ChairColor kitchenColor = new ChairColor(WHITE, BLUE);
+
+        Chair deskChair = new DeskChair(deskColor, new BigDecimal(200L));
+        Chair kitchenChair = new MassageChair(kitchenColor, new BigDecimal(400L));
 
         print(deskChair);
         print(kitchenChair);
@@ -23,9 +28,9 @@ public class App {
     private static void print(Chair chair) {
 
         String message = format(
-            "%s\nrotating:%s\nvalue:%s\n",
+            "%s\ncolors:%s\nvalue:%s\n",
             chair.getClass().getName(),
-            chair.isRotating(),
+            Arrays.toString(chair.getColor().colors()),
             chair.getValue()
         );
 
