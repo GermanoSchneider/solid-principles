@@ -3,12 +3,32 @@
  */
 package org.example;
 
+import static java.awt.Color.BLACK;
+import static java.awt.Color.WHITE;
+import static java.lang.String.format;
+
+import java.math.BigDecimal;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        Chair deskChair = new DeskChair(BLACK, new BigDecimal(200L), new Wheels(5));
+        Chair kitchenChair = new KitchenChair(WHITE, new BigDecimal(100L), new Wheels(4));
+
+        print(deskChair);
+        print(kitchenChair);
+    }
+
+    private static void print(Chair chair) {
+
+        String message = format(
+            "%s\nrotating:%s\nvalue:%s\n",
+            chair.getClass().getName(),
+            chair.isRotating(),
+            chair.getValue()
+        );
+
+        System.out.println(message);
     }
 }
