@@ -3,37 +3,9 @@
  */
 package org.example;
 
-import static java.awt.Color.BLACK;
-import static java.awt.Color.BLUE;
-import static java.awt.Color.WHITE;
-import static java.lang.String.format;
-
-import java.math.BigDecimal;
-import java.util.Arrays;
-
 public class App {
 
     public static void main(String[] args) {
 
-        ChairColor deskColor = new ChairColor(BLACK, WHITE);
-        ChairColor kitchenColor = new ChairColor(WHITE, BLUE);
-
-        Chair deskChair = new DeskChair(deskColor, new BigDecimal(200L));
-        Chair kitchenChair = new MassageChair(kitchenColor, new BigDecimal(400L));
-
-        print(deskChair);
-        print(kitchenChair);
-    }
-
-    private static void print(Chair chair) {
-
-        String message = format(
-            "%s\ncolors:%s\nvalue:%s\n",
-            chair.getClass().getName(),
-            Arrays.toString(chair.getColor().colors()),
-            chair.getValue()
-        );
-
-        System.out.println(message);
     }
 }
