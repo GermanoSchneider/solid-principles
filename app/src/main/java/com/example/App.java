@@ -3,22 +3,7 @@
  */
 package com.example;
 
-import com.example.ocp.Automotive;
-import com.example.ocp.Electronic;
-import com.example.ocp.Kitchen;
-import com.example.ocp.Product;
-import java.math.BigDecimal;
-import java.util.Collection;
-import java.util.List;
-
 public class App {
 
-    public static void main(String[] args) {
-
-        // OCP EXAMPLE
-
-        System.out.println("\nOCP:");
-
-
-    }
+    public static void main(String[] args) {}
 }
