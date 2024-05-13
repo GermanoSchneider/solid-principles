@@ -24,7 +24,11 @@ class Product {
     }
   }
 
-  private enum Category {
+  String getName() {
+    return name;
+  }
+
+  enum Category {
     ELECTRONICS,
     AUTOMOTIVE,
     KITCHEN

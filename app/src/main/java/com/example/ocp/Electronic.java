@@ -2,9 +2,9 @@ package com.example.ocp;
 
 import java.math.BigDecimal;
 
-public class Electronic extends Product {
+class Electronic extends Product {
 
-  public Electronic(String name, BigDecimal value) {
+  Electronic(String name, BigDecimal value) {
     super(name, value);
   }
 

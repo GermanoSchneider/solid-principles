@@ -1,6 +1,6 @@
 package com.example.srp;
 
-public class Address {
+class Address {
 
   private final String city;
   private final String postalCode;
@@ -8,7 +8,7 @@ public class Address {
   private final String street;
   private final String country;
 
-  public Address(String city, String postalCode, Integer number, String street, String country) {
+  Address(String city, String postalCode, Integer number, String street, String country) {
     this.city = city;
     this.postalCode = postalCode;
     this.number = number;
@@ -16,7 +16,7 @@ public class Address {
     this.country = country;
   }
 
-  public String format() {
+  String format() {
 
     return String.format("%s %s\n%s %s\n%s",
         number,

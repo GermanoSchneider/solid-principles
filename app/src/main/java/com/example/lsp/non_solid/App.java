@@ -7,15 +7,14 @@ class App {
 
   public static void main(String[] args) {
 
+    // All animals can eat, but dogs should not be able to fly
+
     Animal dog = new Dog("Pitbull");
     Animal bird = new Bird("Hawk");
 
     Collection<Animal> animals = List.of(dog, bird);
 
-    // Both can eat
     animals.forEach(Animal::eat);
-
-    // But only the bird should fly
     animals.forEach(Animal::fly);
   }
 }

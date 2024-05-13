@@ -2,7 +2,7 @@ package com.example.ocp;
 
 import java.math.BigDecimal;
 
-public abstract class Product {
+abstract class Product {
 
   private final String name;
   private final BigDecimal value;
@@ -17,11 +17,11 @@ public abstract class Product {
     return value.add(tax);
   }
 
-  public String getName() {
+  String getName() {
     return name;
   }
 
-  public BigDecimal getValue() {
+  BigDecimal getValue() {
     return value;
   }
 }

@@ -2,9 +2,9 @@ package com.example.ocp;
 
 import java.math.BigDecimal;
 
-public class Kitchen extends Product {
+class Kitchen extends Product {
 
-  public Kitchen(String name, BigDecimal value) {
+  Kitchen(String name, BigDecimal value) {
     super(name, value);
   }
 
