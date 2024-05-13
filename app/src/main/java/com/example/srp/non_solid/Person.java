@@ -1,4 +1,4 @@
-package org.example.srp.non_solid;
+package com.example.srp.non_solid;
 
 class Person {
 

@@ -1,4 +1,4 @@
-package org.example.srp;
+package com.example.srp;
 
 class Person {
 
