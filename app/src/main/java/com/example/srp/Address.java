@@ -1,27 +1,27 @@
 package com.example.srp;
 
-class Address {
+public class Address {
 
   private final String city;
-  private final String zipCode;
-  private final Integer streetNumber;
-  private final String streetName;
+  private final String postalCode;
+  private final Integer number;
+  private final String street;
   private final String country;
 
-  Address(String city, String zipCode, Integer streetNumber, String streetName, String country) {
+  public Address(String city, String postalCode, Integer number, String street, String country) {
     this.city = city;
-    this.zipCode = zipCode;
-    this.streetNumber = streetNumber;
-    this.streetName = streetName;
+    this.postalCode = postalCode;
+    this.number = number;
+    this.street = street;
     this.country = country;
   }
 
-  String format() {
+  public String format() {
 
     return String.format("%s %s\n%s %s\n%s",
-        streetNumber,
-        streetName,
-        zipCode,
+        number,
+        street,
+        postalCode,
         city,
         country
     );

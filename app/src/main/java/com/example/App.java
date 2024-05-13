@@ -3,9 +3,38 @@
  */
 package com.example;
 
+import com.example.ocp.Automotive;
+import com.example.ocp.Electronic;
+import com.example.ocp.Kitchen;
+import com.example.ocp.Product;
+import com.example.srp.Address;
+import com.example.srp.Person;
+import java.math.BigDecimal;
+import java.util.Collection;
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) {
 
+        // SRP EXAMPLE
+
+        System.out.println("\nSRP:");
+
+        Address address = new Address("Burnaby", "V5G", 4330, "Sanderson Way", "Canada");
+        Person person = new Person("Dummy", address);
+        System.out.println(person.getDescription());
+
+        // OCP EXAMPLE
+
+        System.out.println("\nOCP:");
+
+        Product smartphone = new Electronic("Smartphone", new BigDecimal(1000));
+        Product wheel = new Automotive("Wheel", new BigDecimal(100));
+        Product fork = new Kitchen("Fork", new BigDecimal(5));
+
+        Collection<Product> products = List.of(smartphone, wheel, fork);
+
+        products.forEach(product -> System.out.println(product.getName() + ": $ " + product.getValue()));
     }
 }
